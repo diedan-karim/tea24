@@ -17,10 +17,13 @@ const int rodata2 = 43;
 
 const int big_data_blob[] = {42,0xff};
 
+static int moduleCounter;
+static int moduleValue = 123;
+
 void doSomething(int value)
 {
     value = value + 1;
-    fmt::print("doSomething, value {}\n", value);
+    fmt::println("doSomething, value {} and the address: {}", value, fmt::ptr(&value));
 }
 
 void doSomethingPtr(int* ptr)
@@ -44,5 +47,13 @@ void doSomethingStatic()
 {
     static int value = 56;
     value = value + 1;
-    fmt::print("doSomethingStatic, value {}\n", value);
+    fmt::println("doSomethingStatic, value {} and the address: {}", value, fmt::ptr(&value));
+}
+
+void Outputstatic()
+{
+    int moduleCounter = 0;
+    moduleValue = moduleValue + 4;
+    fmt::println("OutputModuleStatic, moduleValue {} and adress {}", moduleValue, fmt::ptr(&moduleValue));
+    fmt::println("OutputModuleStatic, moduleCounter {} and adress {}", moduleCounter, fmt::ptr(&moduleCounter));
 }

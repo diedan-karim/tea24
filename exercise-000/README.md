@@ -238,13 +238,13 @@ Bevor wir mit den eigentlichen Zeigern arbeiten, schauen wir uns die Parameter d
 
 ### Beispielausgabe
 
-```
+\*
 Anzahl Argumente (argc): 4
 argv[0] = "./build/bin/exercise-000" (Adresse: 0x7ffd12345678)
 argv[1] = "hallo" (Adresse: 0x7ffd12345689)
 argv[2] = "welt" (Adresse: 0x7ffd1234568f)
 argv[3] = "123" (Adresse: 0x7ffd12345694)
-```
+*\
 
 > **Wichtig:** `argc` gibt die Gesamtanzahl an, aber Array-Indizes gehen von `0` bis `argc-1`!
 

@@ -19,6 +19,6 @@ int* doReturnAPtr();
 
 void doSomethingStatic();
 
-
+void Outputstatic();
 
 #endif
